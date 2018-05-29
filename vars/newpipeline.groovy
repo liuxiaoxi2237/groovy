@@ -7,7 +7,12 @@ def call(body) {
 		body()
 	
 		pipeline {
-			agent = any
+			agent {
+				node {
+					label 'masternode'
+				}
+			}
+			
 			tools {
 				maven 'MAVEN3.0'
 				jdk 'JDK1.8'
