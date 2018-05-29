@@ -1,4 +1,3 @@
-import static com.sds.fortiScan.*
 def call(body) {
 	
 		def config = [:]
@@ -49,11 +48,7 @@ def call(body) {
 		
 		stage('scan') {
 				steps {
-					sh '''
-						appName01 = $params.appName
-						projectName01 = $params.projectName
-					'''
-					bscan(this)
+					callscan()
 				}
 		}
 					
