@@ -35,9 +35,9 @@ def call(body) {
 				sh '''
                     mvn install
 					mkdir app-lib
-					find /var/lib/jenkins/workspace/${params.projectName}/${params.appName}  -name *.jar -exec cp {} ./app-lib  \;
+					find /var/lib/jenkins/workspace/${params.projectName}/${params.appName}  -name *.jar -exec cp {} ./app-lib  \";"
 					mkdir maven-lib
-					find ${params.maven_repo}  -name *.jar -exec cp {} ./maven-lib \;
+					find ${params.maven_repo}  -name *.jar -exec cp {} ./maven-lib \";"
                     '''
 			}
 		}
