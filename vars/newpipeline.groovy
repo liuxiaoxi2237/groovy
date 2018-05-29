@@ -1,4 +1,4 @@
-import static com.sds.fortiScan.*;
+import static com.sds.fortiScan.*
 def call(body) {
 	
 		def config = [:]
