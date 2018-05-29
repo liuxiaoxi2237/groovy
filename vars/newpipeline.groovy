@@ -17,11 +17,15 @@ def call(body) {
 				jdk 'JDK1.8'
 				}
 		
+			environment {
+					PATH = $PATH:/opt/HPE_Security/Fortify_SCA_and_Apps_17.10/bin
+			}
+			
 			   stages {
 					stage('initialize') {
 						steps {
 							sh '''
-							PATH = $PATH:/opt/HPE_Security/Fortify_SCA_and_Apps_17.10/bin
+
 							export PATH
 							echo $PATH
 							pwd
