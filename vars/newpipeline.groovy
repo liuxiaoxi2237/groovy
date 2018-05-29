@@ -24,7 +24,6 @@ def call(body) {
 						steps {
 							sh '''
 
-							export PATH
 							echo $PATH
 							pwd
 							'''
