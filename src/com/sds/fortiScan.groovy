@@ -9,4 +9,11 @@ class fortiScan {
 			sh /var/lib/jenkins/scripts/Fortify_$appName.sh $appName $projectName
 			'''
 	}
+	
+	static def bscan(script)
+	{
+		script.sh '''
+			echo "123"
+		'''
+	}
 }

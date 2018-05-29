@@ -53,7 +53,7 @@ def call(body) {
 						appName01 = $params.appName
 						projectName01 = $params.projectName
 					'''
-					fscan(this,appName01,projectName01)
+					bscript(this)
 				}
 		}
 					
