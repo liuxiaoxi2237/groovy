@@ -49,7 +49,11 @@ def call(body) {
 		
 		stage('scan') {
 				steps {
-					fscan(script,${params.appName},${params.projectName})
+					sh '''
+						appName01 = $params.appName
+						projectName01 = $params.projectName
+					'''
+					fscan(script,appName01,projectName01)
 				}
 		}
 					
